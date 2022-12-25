@@ -1,0 +1,37 @@
+accessWidener v1 named
+#method extenders
+extendable method net/minecraft/client/gui/screens/Screen init (Lnet/minecraft/client/Minecraft;II)V
+extendable class com/mojang/blaze3d/platform/NativeImage
+
+#method accessors
+accessible method net/minecraft/client/gui/components/AbstractSelectionList scroll (I)V
+accessible method net/minecraft/client/gui/components/EditBox isBordered ()Z
+accessible method com/mojang/realmsclient/RealmsMainScreen getSelectedServer ()Lcom/mojang/realmsclient/dto/RealmsServer;
+accessible method net/minecraft/client/resources/DownloadedPackSource getDownloadHeaders ()Ljava/util/Map;
+accessible method net/minecraft/client/renderer/RenderType create (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+accessible method net/minecraft/client/renderer/texture/SpriteContents getFrameCount ()I
+accessible method net/minecraft/world/entity/Entity getEncodeId ()Ljava/lang/String;
+accessible method com/mojang/blaze3d/platform/NativeImage writeToChannel (Ljava/nio/channels/WritableByteChannel;)Z
+accessible method net/minecraft/world/level/chunk/storage/ChunkSerializer unpackStructureStart (Lnet/minecraft/world/level/levelgen/structure/pieces/StructurePieceSerializationContext;Lnet/minecraft/nbt/CompoundTag;J)Ljava/util/Map; # unpackStructureStart
+accessible method net/minecraft/world/level/chunk/storage/ChunkSerializer makeBiomeCodec (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec; # makeBiomeCodec
+accessible method net/minecraft/world/level/chunk/storage/ChunkSerializer logErrors (Lnet/minecraft/world/level/ChunkPos;ILjava/lang/String;)V # logErrors
+
+#field accessors
+accessible field net/minecraft/world/level/chunk/storage/ChunkSerializer BLOCK_STATE_CODEC Lcom/mojang/serialization/Codec; # BLOCK_STATE_CODEC
+accessible field net/minecraft/client/gui/screens/Screen renderables Ljava/util/List;
+accessible field net/minecraft/world/level/block/LiquidBlock fluid Lnet/minecraft/world/level/material/FlowingFluid;
+accessible field net/minecraft/world/entity/Entity levelCallback Lnet/minecraft/world/level/entity/EntityInLevelCallback;
+accessible field net/minecraft/client/Minecraft fps I
+accessible field net/minecraft/client/gui/components/EditBox font Lnet/minecraft/client/gui/Font;
+accessible field net/minecraft/client/gui/components/EditBox displayPos I
+accessible field net/minecraft/client/gui/components/AbstractSelectionList scrolling Z
+accessible field net/minecraft/client/renderer/texture/SpriteContents byMipLevel [Lcom/mojang/blaze3d/platform/NativeImage;
+accessible field net/minecraft/client/multiplayer/ClientPacketListener callbackScreen Lnet/minecraft/client/gui/screens/Screen;
+accessible field com/mojang/realmsclient/RealmsMainScreen realmsServers Ljava/util/List;
+accessible field net/minecraft/server/MinecraftServer storageSource Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;
+accessible field net/minecraft/client/KeyMapping key Lcom/mojang/blaze3d/platform/InputConstants$Key;
+accessible field com/mojang/blaze3d/platform/NativeImage pixels J
+
+#class accessors
+accessible class net/minecraft/client/multiplayer/ClientChunkCache$Storage
+
