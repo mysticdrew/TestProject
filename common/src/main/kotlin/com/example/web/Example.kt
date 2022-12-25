@@ -1,6 +1,6 @@
 package com.example.web
 
-class Webmap {
+class Example {
     fun start() {
         print("HelloWorld")
     }
