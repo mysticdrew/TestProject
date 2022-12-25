@@ -167,23 +167,23 @@ shadowJar {
 
 // This block of code expands all the gradle properties in the specified resource targets.
 // It copies them into the targets and expands all the defined properties.
-def resourceTargets = ['license.txt']
-def intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
-def replaceProperties = [
-        version   : modVersion,
-        modVersion: modVersion,
-        apiversion: project.journeymap_api_fabric_version,
-        mcversion : project.minecraft_version,
-        date      : getDate(),
-]
+//def resourceTargets = ['license.txt']
+//def intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
+//def replaceProperties = [
+//        version   : modVersion,
+//        modVersion: modVersion,
+//        apiversion: project.journeymap_api_fabric_version,
+//        mcversion : project.minecraft_version,
+//        date      : getDate(),
+//]
 
 processResources() {
     from project(":common").sourceSets.main.resources
     // this will ensure that this task is redone when the versions change.
-    inputs.properties replaceProperties
-    filesMatching(resourceTargets) {
-        expand replaceProperties
-    }
+//    inputs.properties replaceProperties
+//    filesMatching(resourceTargets) {
+//        expand replaceProperties
+//    }
 
     inputs.property "version", project.version
     inputs.property "apiversion", project.journeymap_api_fabric_version
@@ -196,17 +196,17 @@ processResources() {
                 'apiversion': project.journeymap_api_fabric_version
     }
 
-    intoTargets.each { target ->
-        if (file(target).exists()) {
-            copy {
-                from(sourceSets.main.resources) {
-                    include resourceTargets
-                    expand replaceProperties
-                }
-                into target
-            }
-        }
-    }
+//    intoTargets.each { target ->
+//        if (file(target).exists()) {
+//            copy {
+//                from(sourceSets.main.resources) {
+//                    include resourceTargets
+//                    expand replaceProperties
+//                }
+//                into target
+//            }
+//        }
+//    }
 }
 
 task processDocs(type: Copy) {
